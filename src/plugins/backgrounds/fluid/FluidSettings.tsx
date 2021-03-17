@@ -5,24 +5,6 @@ import { Props, defaultData } from './types';
 const FluidSettings: FC<Props> = ({ data = defaultData, setData }) => (
   <div className="FluidSettings">
     <label>
-      Background color
-      <input
-        type="color"
-        value={data.BACK_COLOR}
-        onChange={event => setData({ ...data, BACK_COLOR: event.target.value })}
-      />
-    </label>
-
-    <label>
-      <input
-        type="checkbox"
-        checked={data.TRANSPARENT}
-        onChange={event => setData({ ...data, TRANSPARENT: !data.TRANSPARENT })}
-      />{' '}
-      Transparent
-    </label>
-
-    <label>
       Quality
       <select
         value={data.DYE_RESOLUTION}
@@ -135,17 +117,6 @@ const FluidSettings: FC<Props> = ({ data = defaultData, setData }) => (
         }
       />{' '}
       Colorful
-    </label>
-
-    <label>
-      <input
-        type="checkbox"
-        checked={data.PAUSED}
-        onChange={() =>
-          setData({ ...data, PAUSED: !data.PAUSED })
-        }
-      />{' '}
-      Paused
     </label>
 
     <label>
